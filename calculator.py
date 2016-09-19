@@ -1,11 +1,11 @@
-x = int(raw_input("Enter the value for X: "))
-print x
+from userinterface import input_number
+from userinterface import math_operat
 
-operation = raw_input("Choose math operation (+, -, *, /):")
-print operation
+x = input_number("Enter the value for X: ")
 
-y = int(raw_input("Enter the value for Y: "))
-print y
+operation = math_operat("Choose math operation (+, -, *, /): ")
+
+y = input_number("Enter the value for Y: ")
 
 if operation == "I'm a hero":
     print "Yes you are a super hero"
