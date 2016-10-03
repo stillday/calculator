@@ -27,19 +27,21 @@ y = Tkinter.Entry(window)
 y.pack()
 
 def calculation():
-    if operation == "I'm a hero":
-        print "Yes you are a super hero"
+    if operation.get() == "I'm a hero":
+        kalk = "Yes you are a super hero"
 
-    if operation == "+":
-        tkMessageBox.showinfo(x + y)
-    elif operation == "-":
-        tkMessageBox.showinfo(x - y)
-    elif operation == "*":
-        tkMessageBox.showinfo(x * y)
-    elif operation == "/":
-        tkMessageBox.showinfo(x / y)
+    elif operation.get() == "+":
+        kalk = int(x.get()) + int(y.get())
+    elif operation.get() == "-":
+        kalk = int(x.get()) - int(y.get())
+    elif operation.get() == "*":
+        kalk = int(x.get()) * int(y.get())
+    elif operation.get() == "/":
+        kalk = int(x.get()) / int(y.get())
 
-submit = Tkinter.Button(window, text = "Submit", command=calculation)
+    tkMessageBox.showinfo("Result", kalk)
+
+submit = Tkinter.Button(window, text = "Berechnen", command=calculation)
 submit.pack()
 
 window.mainloop()
